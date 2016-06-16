@@ -1,0 +1,103 @@
+@import "settings";
+@import "../bower_components/foundation-sites/scss/foundation";
+@import "fonts";
+$dkBlue: #185A5C;
+//html elements
+header {
+  @include grid-row;
+}
+menu ul{
+
+}
+menu ul li{
+  font-size: 20px;
+  font-family: "Avenir",Arial;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 0 1.5em 0 1.5em;
+  color: #ffffff;
+  border-left: solid thin #ffffff;
+  span{
+    font-size: 14px;
+    letter-spacing: normal;
+  }
+  a{
+    -o-transition: .7s;
+    -ms-transition: .7s;
+    -moz-transition: .7s;
+    -webkit-transition: .7s;
+    transition:.7s;
+    color: #ffffff;
+  }
+  a:hover{
+
+    color: #185A5C;
+  }
+
+}
+menu ul li:first-child{
+  border: none;
+}
+//class
+.menuRow{
+  padding: 1.5em 0 1.5em 0;
+  background-color: #8AC9CB;
+}
+.topBar{
+  height: 1em;
+  width: 100%;
+  background-color: #3CA5A9;
+}
+.logo{
+  padding-top: 2em;
+}
+.ico{
+  padding: 0.7em 0 0 0;
+  text-decoration: none;
+}
+.surgeon{
+  padding: 3.5em 0 0 0;
+}
+
+.topBody{
+  padding-bottom: 2em;
+  h2{
+    font-size: 4em;
+    font-family: "Avenir", Arial;
+    color: #ffffff;
+    padding: 0 0 0 0;
+    margin: 0;
+    line-height: 1;
+  }
+  h3{
+    color: $dkBlue;
+    font-size: 3.5em;
+    font-family: "Nirmala UI", Ariel;
+  }
+  h4{
+    font-size: 2em;
+    color: #ffffff;
+    font-family: "Nirmala UI Semilight", Ariel, sans-serif;
+    margin: 0.5em 0 2.5em 0;
+  }
+  .button-lf {
+    font-family: "Nirmala UI Semilight", Ariel, sans-serif;
+    @include button($background: #333333, $background-hover: #5C5C5C);
+  }
+
+  .button-rg{
+      font-family: "Nirmala UI Semilight", Ariel, sans-serif;
+      @include button($background: $dkBlue, $background-hover: #467B7D);
+  }
+}
+
+//Services
+.services{
+  background-color: #fff;
+  margin: 1.5em 0;
+}
+
+
+
+
+
