@@ -43,6 +43,8 @@ window.onload = function() {
             //alert(dataURL);
             //var w=window.open('about:blank','image from canvas');
             //w.document.write("<img src='"+ dataURL +"' alt='from canvas'/>");
+            document.getElementById("image").value = Img.src;
+            document.getElementById("imageWphone").value = dataURL.src;
             var modal_PlaceOrder_Img = document.getElementById("modal-PlaceOrder-Img");
             //var imgDone = new Image();
             //imgDone.id="CustomCase";
