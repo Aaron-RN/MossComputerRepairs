@@ -2,11 +2,16 @@
   font-family: 'Avenir';
   src: url('../fonts/Avenir Roman.otf');
 }
-@font-face {
-  font-family: "Nirmala UI Semilight";
-  src: url('../fonts/Nirmala Semilight.ttf');
-}
+//TODO Fix Semi-Light Nirmala Font Import
+//@font-face {
+//  font-family: "Nirmala UI";
+//  src: url('../fonts/NirmalaS.ttf');
+//  font-weight: 300;
+//  font-style: normal;
+//}
 @font-face{
   font-family: "Nirmala UI";
   src: url('../fonts/Nirmala.ttf');
 }
+
+$Nirmala: "Nirmala UI", Ariel;

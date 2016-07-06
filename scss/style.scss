@@ -1,102 +1,528 @@
-@import "settings";
 @import "../bower_components/foundation-sites/scss/foundation";
+@import "settings";
 @import "fonts";
-$dkBlue: #185A5C;
-//html elements
-header {
-  @include grid-row;
-}
-menu ul{
+@import "colors";
 
-}
-menu ul li{
-  font-size: 20px;
-  font-family: "Avenir",Arial;
-  letter-spacing: 0.1em;
-  text-align: center;
-  padding: 0 1.5em 0 1.5em;
-  color: #ffffff;
-  border-left: solid thin #ffffff;
-  span{
-    font-size: 14px;
-    letter-spacing: normal;
+//Top Sect
+.topSect {
+  .menuRow {
+    padding: 1.5em 0 1.5em 0;
+    background-color: #8AC9CB;
   }
-  a{
-    -o-transition: .7s;
-    -ms-transition: .7s;
-    -moz-transition: .7s;
-    -webkit-transition: .7s;
-    transition:.7s;
-    color: #ffffff;
+  .topBar {
+    height: 1em;
+    width: 100%;
+    background-color: #3CA5A9;
   }
-  a:hover{
-
-    color: #185A5C;
+  .logo {
+    padding-top: 2em;
   }
-
-}
-menu ul li:first-child{
-  border: none;
-}
-//class
-.menuRow{
-  padding: 1.5em 0 1.5em 0;
-  background-color: #8AC9CB;
-}
-.topBar{
-  height: 1em;
-  width: 100%;
-  background-color: #3CA5A9;
-}
-.logo{
-  padding-top: 2em;
-}
-.ico{
-  padding: 0.7em 0 0 0;
-  text-decoration: none;
-}
-.surgeon{
-  padding: 3.5em 0 0 0;
-}
-
-.topBody{
-  padding-bottom: 2em;
-  h2{
-    font-size: 4em;
+  .ico {
+    padding: 0.7em 0 0 0;
+    text-decoration: none;
+  }
+  .surgeon {
+    padding: 3.5em 0 0 0;
+  }
+  header {
+    @include grid-row;
+    scroll-snap-type: mandatory;
+    scroll-snap-coordinate: initial;
+  }
+  menu ul {
+  }
+  menu ul li {
+    font-size: 20px;
     font-family: "Avenir", Arial;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 0 1.5em 0 1.5em;
     color: #ffffff;
-    padding: 0 0 0 0;
-    margin: 0;
-    line-height: 1;
+    border-left: solid thin #ffffff;
+    span {
+      font-size: 14px;
+      letter-spacing: normal;
+    }
+    a {
+      -o-transition: .7s;
+      -ms-transition: .7s;
+      -moz-transition: .7s;
+      -webkit-transition: .7s;
+      transition: .7s;
+      color: #ffffff;
+    }
+    a:hover {
+      color: #185A5C;
+    }
   }
-  h3{
-    color: $dkBlue;
-    font-size: 3.5em;
-    font-family: "Nirmala UI", Ariel;
-  }
-  h4{
-    font-size: 2em;
-    color: #ffffff;
-    font-family: "Nirmala UI Semilight", Ariel, sans-serif;
-    margin: 0.5em 0 2.5em 0;
-  }
-  .button-lf {
-    font-family: "Nirmala UI Semilight", Ariel, sans-serif;
-    @include button($background: #333333, $background-hover: #5C5C5C);
+  menu ul li:first-child {
+    border: none;
   }
 
-  .button-rg{
-      font-family: "Nirmala UI Semilight", Ariel, sans-serif;
+  .topBody {
+    padding-bottom: 2em;
+    h2 {
+      /* Small only */
+      @media screen and (max-width: 39.9375em) {
+        font-size: 2em;
+      }
+      /* Medium and up */
+      @media screen and (min-width: 40em) {
+        font-size: 4em;
+      }
+
+      font-family: "Avenir", Arial;
+      color: #ffffff;
+      padding: 0 0 0 0;
+      margin: 0;
+      line-height: 1;
+    }
+    h3 {
+      color: $dkBlue;
+      /* Small only */
+      @media screen and (max-width: 39.9375em) {
+        font-size: 1em;
+      }
+      /* Medium and up */
+      @media screen and (min-width: 40em) {
+        font-size: 3.5em;
+      }
+      font-family: $Nirmala;
+    }
+    h4 {
+      @media screen and (max-width: 39.9375em) {
+        font-size: 0.7em;
+      }
+      /* Medium and up */
+      @media screen and (min-width: 40em) {
+        font-size: 2em;
+      }
+      color: #ffffff;
+      font-family: $Nirmala;
+      font-weight: 300;
+      margin: 0.5em 0 2.5em 0;
+    }
+    .button-lf {
+      font-family: $Nirmala;
+      font-weight: 300;
+      @include button($background: #333333, $background-hover: #5C5C5C);
+    }
+    .button-rg {
+      font-family: $Nirmala;
+      font-weight: 300;
       @include button($background: $dkBlue, $background-hover: #467B7D);
+    }
   }
 }
 
 //Services
-.services{
-  background-color: #fff;
-  margin: 1.5em 0;
+.service{
+  padding: 1em 0 5em 0;
+  scroll-snap-type: mandatory;
+  scroll-snap-coordinate: initial;
+
+
+  h2{
+      font-size: 4em;
+      color: #333;
+      font-family: "Nirmala UI", Ariel, sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+  p{
+    color: #B63937;
+    font-family: "Nirmala UI", Ariel, sans-serif;
+    font-size: 1em;
+    padding: 0;
+    margin: 0 0 1em 0;
+
+  }
 }
 
+//Icons
+.icons{
+  padding: 3em 0;
+  background-color: #F2F2F2;
+  -moz-box-shadow:    inset 0 0 10px #383838;
+  -webkit-box-shadow: inset 0 0 10px #383838;
+  box-shadow:         inset 0 0 10px #383838;
+}
+
+//Case
+.case {
+  border-top: .5em #333 solid;
+  border-bottom: .5em #3CA5A9 solid;
+  padding: 5em 0;
+
+  .hidden{
+    opacity:0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  #Right-Box {
+    margin: auto;
+    position: relative;
+    height: 600px;
+  }
+  .Right-Box-canvas {
+    margin: auto;
+    position: absolute;
+    padding: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border: 1px solid rgba(100, 100, 100, 0.05);
+    border-radius: 35px;
+  }
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: scroll; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    border-radius: 10px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-name: animatetop;
+    -moz-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {
+      top: -200px;
+      opacity: 0
+    }
+    to {
+      top: 0;
+      opacity: 1
+    }
+  }
+
+  @-moz-keyframes animatetop {
+    from {
+      top: -200px;
+      opacity: 0
+    }
+    to {
+      top: 0;
+      opacity: 1
+    }
+  }
+  @keyframes animatetop {
+    from {
+      top: -200px;
+      opacity: 0
+    }
+    to {
+      top: 0;
+      opacity: 1
+    }
+  }
+
+  @-webkit-keyframes animatetop-close {
+    from {
+      top: 0;
+      opacity: 1
+    }
+    to {
+      top: 200px;
+      opacity: 0
+    }
+  }
+
+  @-moz-keyframes animatetop-close {
+    from {
+      top: 0;
+      opacity: 1
+    }
+    to {
+      top: 200px;
+      opacity: 0
+    }
+  }
+  @keyframes animatetop-close {
+    from {
+      top: 0;
+      opacity: 1
+    }
+    to {
+      top: 200px;
+      opacity: 0
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    border: 1px solid rgba(255, 255, 225, 0.05);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 225, 0.05);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    background-color: rgba(255, 255, 225, 0.15);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(255, 200, 50);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-header {
+    border-radius: 10px;
+    text-align: center;
+    padding: 2px 8px;
+    background-color: darkcyan;
+    color: white;
+    font-size: 25px;
+  }
+
+  .modal-body {
+    text-align: center;
+    padding: 2px 8px;
+    font-size: 25px;
+    font-family: Georgia, serif;
+  }
+
+  .modal-footer {
+    text-align: center;
+    border-radius: 10px;
+    padding: 2px 8px;
+    background-color: darkcyan;
+    color: white;
+  }
+}
+
+//Reviews
+.reviews{
+
+  /* Small only */
+  @media screen and (max-width: 39.9375em) {
+    padding: 2em 0 4em 0;
+  }
+  /* Medium and up */
+  @media screen and (min-width: 40em) {
+    padding: 3.5em 0 7em 0;
+  }
+  background-image: url("../images/bg/review.png");
+  border-top: $dkBlue .5em solid;
+  h2{
+    font-family: "Nirmala UI", Ariel, sans-serif;
+    /* Small only */
+    @media screen and (max-width: 39.9375em) {
+      font-size: 3em;
+    }
+    /* Medium and up */
+    @media screen and (min-width: 40em) {
+      font-size: 5em;
+    }
+
+    padding: .7em 0 1.5em 0;
+    color:#5C1918;
+  }
+ //imported classes
+  .centered-text {
+    text-align: center;
+  }
+
+  .quote {
+    background: #ebf3f5;
+    padding: 15px 20px 5px 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    font-family: $Nirmala;
+    /* Small only */
+    @media screen and (max-width: 39.9375em) {
+      font-size: 1em;
+    }
+    /* Medium and up */
+    @media screen and (min-width: 40em) {
+      font-size: 1.3em;
+
+      &:after {
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 20px 18px 0 18px;
+        border-color: #ebf3f5 transparent transparent transparent;
+        position: relative;
+        top: 50px;
+        left: 35px;
+      }
+    }
+  }
+
+  .student {
+    margin-left: 25px;
+    margin-bottom: 80px;
+    .photo{
+      background-color: #ccc;
+      border-radius: 100px;
+      width: 150px;
+      height: 150px;
+      float: left;
+      margin-right: 10px;
+    }
+    p{
+      position: relative;
+      top: 5px;
+      text-transform: uppercase;
+      &:nth-child(2) {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      &:nth-child(3) {
+        font-size: 14px;
+        color: #777;
+      }
+    }
+  }
+}
+
+//Contacts
+.contact{
+  scroll-snap-type: mandatory;
+  scroll-snap-coordinate: initial;
+  background-image: url(../images/bg/dots.png);
+  background-repeat: repeat;
+  padding: 6em 0 6em 0;
+  /* Small only */
+  @media screen and (max-width: 39.9375em) {
+    padding: 3em 0 6em 0;
+  }
+  /* Medium and up */
+  @media screen and (min-width: 40em) {
+    padding: 6em 0 6em 0;
+  }
+  border-bottom: 1em #333 solid;
+  .button{
+    @include button($background: #90D9DC, $background-hover: #079B9B);
+  }
+  h2{
+    color: #3CA5A9;
+    font-family: $Nirmala;
+    /* Small only */
+    @media screen and (max-width: 39.9375em) {
+        font-size: 3em;
+    }
+    /* Medium and up */
+    @media screen and (min-width: 40em) {
+        font-size: 4em;
+    }
+    margin: 0 0 1em 0;
+  }
+  #map{
+    width: 100%;
+    height: 500px;
+    position: inherit;
+    border: medium solid #CCC;
+  }
+
+}
+.map{
+  h1{
+    font-size: 1.2em;
+    color: $dkBlue;
+    font-family: "Avenir", Arial;
+  }
+  p{
+    font-size: 1em;
+    color: $dkBlue;
+    font-family: "Avenir", Arial;
+  }
+
+}
+
+
+//Footer
+footer{
+  background-color: $lgBlue;
+  color: #ffffff;
+  padding: 4em 0 2em 0;
+  font-family: $Nirmala;
+  a{
+    color: #ffffff;
+  }
+  a:hover{
+    color: #ffffff;
+  }
+  h3{
+    @media screen and (max-width: 39.9375em) {
+      font-size: 0.9em;
+    }
+    /* Medium and up */
+    @media screen and (min-width: 40em) {
+      font-size: 2.5em;
+    }
+
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+  }
+  p{
+    /* Small */
+    @media screen and (max-width: 39.9375em) {
+      font-size: 0.5em;
+    }
+    /* Medium and up */
+    @media screen and (min-width: 40em) {
+      font-size: 1em;
+    }
+    color: #333333;
+  }
+  span{
+    font-size: .7em;
+  }
+  img{
+    padding: 0 0 1em 0;
+  }
+  .shadowfilter {
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,255,0.80));
+    -webkit-transition: all .7s linear;
+    -o-transition: all .7s linear;
+    transition: all .7s linear;
+
+  }
+  .shadowfilter:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 231, 255, 0.8));
+  }
+  .copy{
+    margin: 4em 0 0 0;
+  }
+}
 
 
 
