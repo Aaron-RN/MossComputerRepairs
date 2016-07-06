@@ -40,10 +40,11 @@ window.onload = function() {
             dataURL.setAttribute('crossOrigin', 'anonymous');
             //dataURL.crossOrigin= "anonymous";
             dataURL.src = bgcanvas.toDataURL("image/png");
-            //alert(dataURL);
             //var w=window.open('about:blank','image from canvas');
             //w.document.write("<img src='"+ dataURL +"' alt='from canvas'/>");
             var modal_PlaceOrder_Img = document.getElementById("modal-PlaceOrder-Img");
+            document.getElementById("image").value = imgUploaded.sourceId;
+            document.getElementById("imageWphone").value = dataURL.src;
             //var imgDone = new Image();
             //imgDone.id="CustomCase";
             //imgDone.src = dataURL;
