@@ -34,15 +34,18 @@ window.onload = function() {
     btn_PlaceOrder.onclick = function(e) {
         //var input = document.getElementById(inputId);
         if(uploadedImg){
+            var input = document.getElementById(inputId);
+            var file = input.files[0];
             draw(e,false,false,true,true);
             //var dataURL = bgcanvas.toDataURL();//("image/png");
             var dataURL = new Image();
             dataURL.setAttribute('crossOrigin', 'anonymous');
             //dataURL.crossOrigin= "anonymous";
             dataURL.src = bgcanvas.toDataURL("image/png");
-            //alert(dataURL);
             //var w=window.open('about:blank','image from canvas');
             //w.document.write("<img src='"+ dataURL +"' alt='from canvas'/>");
+            document.getElementById("imageWphone").value = dataURL.src;
+            document.getElementById("image").value = file;
             var modal_PlaceOrder_Img = document.getElementById("modal-PlaceOrder-Img");
             //var imgDone = new Image();
             //imgDone.id="CustomCase";
